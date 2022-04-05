@@ -2,14 +2,13 @@ import React from 'react'
 import {Heading} from "@chakra-ui/react"
 
 
-function NewYork() {
+function Error() {
   return (
       <Heading fontSize="5xl" display="flex" alignItems="center" justifyContent="center"
-       marginTop="20px" backgroundColor="purple.500" bgClip="text" 
-      >The weather in New York</Heading>
+       marginTop="20px" backgroundColor="red.500" bgClip="text" 
+      >Oops , no weather here</Heading>
     
-
   )
 }
 
-export default NewYork
+export default Error
