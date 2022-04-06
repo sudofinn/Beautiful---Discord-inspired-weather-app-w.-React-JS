@@ -20,7 +20,7 @@ function SettingsModalOverlay () {
 
     return (
         <div>
-        <Button onClick={onOpen} size="sm">Open Modal</Button>
+        <Button onClick={onOpen} size="sm">Settings</Button>
         
         <Modal isOpen={isOpen} onClose={onClose}>
 
