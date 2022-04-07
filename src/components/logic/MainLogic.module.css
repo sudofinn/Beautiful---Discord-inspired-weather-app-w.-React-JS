@@ -1,0 +1,37 @@
+.outer {
+    /* general */
+    box-sizing: border-box;
+
+    
+    width:400px;
+    height:400px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* bad pratice , must adjust w. clamp, or media 
+    query */
+    margin-left: 350px;
+    margin-top:30px;
+
+    /* relative to .top ( child) */
+    position:relative;
+    
+
+
+    /* ui */
+    border: 10px solid #6699cc;
+    border-radius:15%;
+
+}
+
+
+.top {
+    position: absolute;
+    top:40px; /* from parent (.outer ) */
+
+
+}
