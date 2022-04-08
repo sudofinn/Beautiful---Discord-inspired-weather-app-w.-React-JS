@@ -2,7 +2,6 @@ import React from 'react'
 
 import PrimaryLogic from '../logic/MainLogic'
 
-//los angeles
 
 function LosAngeles() {
 

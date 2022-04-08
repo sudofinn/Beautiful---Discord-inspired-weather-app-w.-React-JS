@@ -1,11 +1,9 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 
-import classes from "./NavBar.module.css"
 
 
 import {VStack, IconButton} from "@chakra-ui/react"
-import { Heading } from '@chakra-ui/react'
 
 import {motion} from "framer-motion"
 
@@ -23,7 +21,7 @@ function NavBar() {
   return (
       
    <div>
-     <VStack float="left" marginTop="40px" marginLeft="15px" className={classes.vstack} spacing="30px" >
+     <VStack float="left" marginTop="40px" marginLeft="15px"  spacing="30px" >
 
       <Link to ="/new-york">
        <MotionIconButton icon={<AiFillHome />} size="lg"  whileHover={{scale:1.5}} />

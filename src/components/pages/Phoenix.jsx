@@ -1,7 +1,6 @@
 import React from "react"
 import PrimaryLogic from "../logic/MainLogic"
 
-//phoenix
 
 
 function Phoenix() {
@@ -15,8 +14,3 @@ function Phoenix() {
 
 export default Phoenix
 
-/*
-<Heading fontSize="5xl" display="flex" alignItems="center" justifyContent="center"
-       marginTop="50px" backgroundColor="orange.500" bgClip="text" 
-      >The weather in Tokyo </Heading>
-      */

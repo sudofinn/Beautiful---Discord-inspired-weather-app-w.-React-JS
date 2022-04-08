@@ -1,9 +1,7 @@
 import React from 'react'
-import {Heading} from "@chakra-ui/react"
 
 import PrimaryLogic from "../logic/MainLogic"
 
-//houston
 
 
 function Houston() {
@@ -20,9 +18,3 @@ function Houston() {
 }
 
 export default Houston
-
-/*
-<Heading fontSize="5xl" display="flex" alignItems="center" justifyContent="center"
-marginTop="50px" backgroundColor="green.700" bgClip="text" 
->The weather in Sydney</Heading>
-*/

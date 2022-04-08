@@ -1,12 +1,11 @@
 import React from 'react'
 
 import { useState , useEffect} from 'react'
-import {Heading, Text, Box, IconButton, Icon} from "@chakra-ui/react"
+import {Heading, Icon} from "@chakra-ui/react"
 import {WiDayThunderstorm, WiDayCloudy} from "react-icons/wi"
 
 import axios from "axios"
 
-import {motion} from "framer-motion"
 
 
 
@@ -17,8 +16,7 @@ import classes from "../logic/MainLogic.module.css"
 function PrimaryLogic(props) {
   const zip = props.zip
    
-  //const weatherUrl = "https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=10001&distance=25&API_KEY=233C95BB-A17B-4D76-9019-CDD6B336377E"
-  const weatherUrl = `https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=${zip}&distance=25&API_KEY=233C95BB-A17B-4D76-9019-CDD6B336377E`
+  const weatherUrl = `api key air now`
   
 
   // make weather api request
@@ -80,15 +78,17 @@ function PrimaryLogic(props) {
     
 
     <div className={classes.whole}>
-      <Heading fontSize="5xl" display="flex" alignItems="center" justifyContent="center"
-       marginTop="50px" backgroundColor={props.whole} bgClip="text" 
+      <Heading  display="flex" alignItems="center" justifyContent="center"
+       marginTop="50px" backgroundColor={props.whole} bgClip="text"
+       fontSize={{ base: '40px', md: '50px', lg: '56px' }} 
       >
          {city}
       </Heading>
 
        <div className={classes.outer}>
          <div className={classes.top}>
-           <Heading fontSize="7xl" _hover={{color:`${props.top}`}} >
+           <Heading  _hover={{color:`${props.top}`}}
+            fontSize={{ base: '50px', md: '50px', lg: '70px' }} >
                {temp}</Heading>
 
            <Icon as={icon === "Good" ? WiDayThunderstorm : WiDayCloudy } w={16} h={16}

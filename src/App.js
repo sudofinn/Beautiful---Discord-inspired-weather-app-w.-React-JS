@@ -3,7 +3,6 @@ import React from "react"
 
 import {Routes, Route} from "react-router-dom"
 
-import DarkMode from "./components/ui/Dropdown"
 
 import NavBar from "./components/ui/NavBar"
 import Dropdown from "./components/ui/Dropdown"
