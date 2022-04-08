@@ -16,7 +16,7 @@ import classes from "../logic/MainLogic.module.css"
 function PrimaryLogic(props) {
   const zip = props.zip
    
-  const weatherUrl = `api key air now`
+  const weatherUrl = `air now api`
   
 
   // make weather api request
