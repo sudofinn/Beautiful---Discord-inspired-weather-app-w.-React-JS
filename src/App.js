@@ -8,6 +8,7 @@ import DarkMode from "./components/ui/Dropdown"
 import NavBar from "./components/ui/NavBar"
 import Dropdown from "./components/ui/Dropdown"
 
+//import MainLogic from "./components/logic/MainLogic"
 import Home from "./components/pages/Home"
 import Berlin from "./components/pages/Berlin"
 import Dubai from "./components/pages/Dubai"

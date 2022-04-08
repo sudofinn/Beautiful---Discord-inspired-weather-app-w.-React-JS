@@ -1,55 +1,113 @@
 import React from 'react'
 
-import {useState, useEffect} from "react"
+import { useState , useEffect} from 'react'
+import {Heading, Text, Box, IconButton, Icon} from "@chakra-ui/react"
+import {WiDayThunderstorm, WiDayCloudy} from "react-icons/wi"
+
 import axios from "axios"
 
-import classes from "./MainLogic.module.css"
+import {motion} from "framer-motion"
 
-import {Box} from "@chakra-ui/react"
 
-function MainLogic() {
+
+import classes from "../logic/MainLogic.module.css"
+
+
+
+function PrimaryLogic(props) {
+  const zip = props.zip
    
+  //const weatherUrl = "https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=10001&distance=25&API_KEY=233C95BB-A17B-4D76-9019-CDD6B336377E"
+  const weatherUrl = `https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=${zip}&distance=25&API_KEY=233C95BB-A17B-4D76-9019-CDD6B336377E`
+  
 
-    
+  // make weather api request
+  const [weather, setWeather] = useState(0)
 
-   
+  const [icon, setIcon] = useState(0)
 
-    //const weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat={${lat}}&lon={${lon}}&appid={${key}}`
-    //maybe wait couple hours 
+  useEffect(()=> {
+    axios.get(weatherUrl).then((response) => {
+      setWeather(response.data)
+      console.log(response.data)
+    })
+  }, [])
 
-    const weatherApi = "https://api.openweathermap.org/data/2.5/weather?lat={52}&lon={13}&appid={	5dfad5e7e5366fba0e5d}"
-    
-    const [weather, setWeather] = useState(0)
-    
-    useEffect(( )=> {
-        axios.get(weatherApi).then((response ) => {
-            console.log(response.data)
-            setWeather(response.data)
-        })
-    }, [])
-
-    if(!weather) return null
+  
+  
 
 
-    
+  
 
+  if(!weather) return null
+
+  
+   //set variables
+  const city = `${weather[0].ReportingArea}`
+  const temp = `${weather[0].AQI}`
+  const iconChange = `${weather[0].Category.Name}`
+  console.log(iconChange)
+  
+  const decide = () => {
+    if(iconChange == "Good") {
+      setIcon("Good")
+    }
+    else (
+      setIcon("Bad")
+    )
+  }
+  
+
+
+ 
+   //calculating day
+  const dateBuilder = (d) => {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`
+
+
+  }
+  
 
   return (
-    <Box bg="tomato" w="80%" p={4} color="white">
-      This is the box
-    </Box>
-  )
+    
 
+    <div className={classes.whole}>
+      <Heading fontSize="5xl" display="flex" alignItems="center" justifyContent="center"
+       marginTop="50px" backgroundColor={props.whole} bgClip="text" 
+      >
+         {city}
+      </Heading>
+
+       <div className={classes.outer}>
+         <div className={classes.top}>
+           <Heading fontSize="7xl" _hover={{color:`${props.top}`}} >
+               {temp}</Heading>
+
+           <Icon as={icon === "Good" ? WiDayThunderstorm : WiDayCloudy } w={16} h={16}
+            marginTop="20px" _hover={{color:`${props.topicon}`}} />
+         </div>
+
+         <div className={classes.bottom}>
+           <Heading size="md" marginTop="160px"
+           _hover={{color:`${props.bottom}`}}>
+            {dateBuilder(new Date())}</Heading>
+
+
+             
+         </div>
+       </div>
+    
+    </div>
+    
+  )
 }
 
-
-export default MainLogic
-
-
-/*<div className={classes.outer}>
-<div className={classes.top}></div> 
-
-<div className={classes.bottom}></div>
-</div> 
-
-*/
+export default PrimaryLogic
