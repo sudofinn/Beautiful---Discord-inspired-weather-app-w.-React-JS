@@ -7,8 +7,8 @@ It has a beautiful navbar , a dark mode switch and uses routing to make it
 extremely fast. 🏃
 
 ## Snapshots
-<img src="./components/ui/svg/HomePageLight.jpg" alt="Primary picuture, homepage" >
-<img src="./components/ui/svg/NewYorkDark.jpg" alt="Secondary picture, NewYork ">
+<img src="./src/components/ui/svg/HomePageLight.jpg" alt="Primary picuture, homepage" >
+<img src="./src/components/ui/svg/NewYorkDark.jpg" alt="Secondary picture, NewYork ">
 
 
 ## Install , run
