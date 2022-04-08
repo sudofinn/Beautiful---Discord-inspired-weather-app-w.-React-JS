@@ -4,7 +4,7 @@ import PrimaryLogic from "../logic/MainLogic"
 //phoenix
 
 
-function Tokyo() {
+function Phoenix() {
   return (
     <PrimaryLogic zip="85001"whole="orange.500"
     top="green.600" topicon="orange.400" bottom="green.400"  />
@@ -13,7 +13,7 @@ function Tokyo() {
   )
 }
 
-export default Tokyo
+export default Phoenix
 
 /*
 <Heading fontSize="5xl" display="flex" alignItems="center" justifyContent="center"

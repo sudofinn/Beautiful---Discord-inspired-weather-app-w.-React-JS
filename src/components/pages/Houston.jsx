@@ -6,7 +6,7 @@ import PrimaryLogic from "../logic/MainLogic"
 //houston
 
 
-function Sydney() {
+function Houston() {
   return (
     <div>
      
@@ -19,7 +19,7 @@ function Sydney() {
   )
 }
 
-export default Sydney
+export default Houston
 
 /*
 <Heading fontSize="5xl" display="flex" alignItems="center" justifyContent="center"

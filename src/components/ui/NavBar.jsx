@@ -25,25 +25,25 @@ function NavBar() {
    <div>
      <VStack float="left" marginTop="40px" marginLeft="15px" className={classes.vstack} spacing="30px" >
 
-      <Link to ="/berlin">
+      <Link to ="/new-york">
        <MotionIconButton icon={<AiFillHome />} size="lg"  whileHover={{scale:1.5}} />
       </Link>
        
 
-     <Link to ="/dubai">
+     <Link to ="/los-angeles">
         <MotionIconButton icon={<AiFillFire />} size="lg" whileHover={{scale:1.5}} />
      </Link>
 
 
-     <Link to ="/newyork">
+     <Link to ="/chicago">
       <MotionIconButton icon={<AiOutlineAliwangwang />} size="lg" whileHover={{scale:1.5}} />
      </Link>
 
-     <Link to="/sydney">
+     <Link to="/houston">
      <MotionIconButton icon={<AiOutlineHeart />} size="lg" whileHover={{scale:1.5}} />
      </Link>
 
-     <Link to="/tokyo">
+     <Link to="/phoenix">
      <MotionIconButton icon={<AiTwotoneCrown />} size="lg" whileHover={{scale:1.5}} />
      </Link>
 

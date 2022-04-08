@@ -14,12 +14,12 @@ import classes from "../logic/MainLogic.module.css"
 
 //new york
 
-function Berlin() {
+function Chicago() {
   
   
 
   return (
-    <PrimaryLogic zip="10001" whole="yellow.500"
+    <PrimaryLogic zip="60007" whole="yellow.500"
     top="yellow.400" topicon="yellow.400" bottom="blue.400"/>
 
    
@@ -27,4 +27,4 @@ function Berlin() {
   )
 }
 
-export default Berlin
+export default Chicago

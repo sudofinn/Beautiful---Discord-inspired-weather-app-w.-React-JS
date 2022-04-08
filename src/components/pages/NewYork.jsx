@@ -6,7 +6,7 @@ import PrimaryLogic from '../logic/MainLogic'
 
 function NewYork() {
   return (
-    <PrimaryLogic zip="60007" whole="green.500"
+    <PrimaryLogic zip="10001" whole="green.500"
     top="orange.400" topicon="green.400" bottom="orange.400" />
      
     

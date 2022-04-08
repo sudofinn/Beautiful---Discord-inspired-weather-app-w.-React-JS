@@ -8,14 +8,17 @@ import DarkMode from "./components/ui/Dropdown"
 import NavBar from "./components/ui/NavBar"
 import Dropdown from "./components/ui/Dropdown"
 
-//import MainLogic from "./components/logic/MainLogic"
+
 import Home from "./components/pages/Home"
-import Berlin from "./components/pages/Berlin"
-import Dubai from "./components/pages/Dubai"
-import Error from "./components/pages/Error"
+
 import NewYork from "./components/pages/NewYork"
-import Sydney from "./components/pages/Sydney"
-import Tokyo from "./components/pages/Tokyo"
+import LosAngeles from "./components/pages/LosAngeles"
+import Chicago from "./components/pages/Chicago"
+import Houston from "./components/pages/Houston"
+import Phoenix from "./components/pages/Phoenix"
+
+import Error from "./components/pages/Error"
+
 
 
 function App() {
@@ -33,11 +36,11 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/berlin" element={<Berlin />} />
-        <Route path="/dubai" element={<Dubai />} />
-        <Route path="/newyork" element={<NewYork />} />
-        <Route path="/sydney" element={<Sydney />} />
-        <Route path="/tokyo" element={<Tokyo />} />
+        <Route path="/new-york" element={<NewYork />} />
+        <Route path="/los-angeles" element={<LosAngeles />} />
+        <Route path="/chicago" element={<Chicago />} />
+        <Route path="/houston" element={<Houston />} />
+        <Route path="/phoenix" element={<Phoenix />} />
         <Route path="*" element={<Error />} />
       </Routes>
 
